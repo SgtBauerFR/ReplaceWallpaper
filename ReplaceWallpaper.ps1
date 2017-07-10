@@ -25,7 +25,9 @@ $acl.SetAccessRule($accessRule)
 $acl | Set-Acl $folder
 icacls $folder /inheritance:e /t /c
 Remove-Item c:\windows\WEB\wallpaper\Windows\Q_FONDECRAN_V11.jpg
+Remove-Item c:\windows\WEB\wallpaper\Windows\img0.jpg
 Copy-Item $PSScriptRoot\Q_FONDECRAN_V11.jpg c:\windows\WEB\wallpaper\Windows\Q_FONDECRAN_V11.jpg
+Copy-Item $PSScriptRoot\img0.jpg c:\windows\WEB\wallpaper\Windows\img0.jpg
 $userbureau = [Environment]::GetFolderPath("Desktop")
 $domainUser = "DLM\$env:USERNAME"
 $folderDest = "C:\windows\WEB\wallpaper\Windows"
@@ -189,7 +191,9 @@ $acl.SetAccessRule($accessRule)
 $acl | Set-Acl $folder
 icacls $folder /inheritance:e /t /c
 Remove-Item c:\windows\WEB\wallpaper\Windows\Q_FONDECRAN_V11.jpg
+Remove-Item c:\windows\WEB\wallpaper\Windows\img0.jpg
 Copy-Item $PSScriptRoot\Q_FONDECRAN_V11.jpg c:\windows\WEB\wallpaper\Windows\Q_FONDECRAN_V11.jpg
+Copy-Item $PSScriptRoot\img0.jpg c:\windows\WEB\wallpaper\Windows\img0.jpg
 $userbureau = [Environment]::GetFolderPath("Desktop")
 $domainUser = "DLM\$env:USERNAME"
 $folderDest = "C:\windows\WEB\wallpaper\Windows"
@@ -225,6 +229,3 @@ $wshell = New-Object -ComObject Wscript.Shell
 $wshell.Popup("-ByLio- Opération finie avec succès",0,"Fond Ecran",0x1)
 
 exit
-
-
-
